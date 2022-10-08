@@ -1,0 +1,150 @@
+/* GENERAL STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Playfair Display', serif; */
+
+/* UNIVERSAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+}
+
+body {
+    font-size: 1rem;
+}
+
+/* Hero Styles */
+.Hero {
+    background-color: #f9f4e8;
+    width: 100%;
+    height: 100vh;
+    padding: 0 8%;
+}
+
+/* Navigation Bar */
+.Nav {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Nav__Logo {
+    flex-basis: 15em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navigation Bar Logo */
+.Nav__Logo>a {
+    font-family: 'Lato', sans-serif;
+    margin-left: 0.5em;
+    width: 8.75rem;
+    background: linear-gradient(to right, #eaa955, #ea5573);
+    color: #f5f5f5;
+    padding: 0.3125rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 1.5625rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.Nav__Logo>a:hover,
+.Nav__Logo>a:focus {
+    color: #360b0b;
+}
+
+/* Navigation Bar Links*/
+.Nav__Links {
+    flex: 1;
+    text-align: center;
+}
+
+.Nav__Links ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 1rem;
+}
+
+.Nav__Links ul li a {
+    text-decoration: none;
+    color: #525252;
+    font-weight: 600;
+}
+
+.Nav__Links ul li a:hover,
+.Nav__Links ul li a:focus {
+    text-decoration: underline;
+    text-decoration-color: #360b0b;
+    color: #360b0b;
+    outline: none;
+}
+
+/* Navigation Bar Call To Action */
+.Nav__Ctn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Nav__Ctn a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.Nav__Ctn__SignIn {
+    color: #525252;
+    font-weight: 600;
+}
+
+.Nav__Ctn__SignIn:hover,
+.Nav__Ctn__SignIn:focus {
+    text-decoration: underline;
+    text-decoration-color: #360b0b;
+    color: #360b0b;
+}
+
+.Nav__Ctn__Waitlist {
+    color: #fff;
+    font-weight: 600;
+    padding: 0.75rem 0.9375rem;
+    border-radius: 0.3125rem;
+    background-color: #4977ea;
+}
+
+.Nav__Ctn__Waitlist:hover,
+.Nav__Ctn__Waitlist:focus {
+    color: #360b0b;
+}
+
+/* Navigation Bar Menu*/
+.Nav__Hamburger {
+    width: 1.875rem;
+    height: 1.875rem;
+    display: none;
+    /* position: absolute; */
+}
+
+.Nav__Hamburger div {
+    background-color: #000;
+    width: 1.875rem;
+    height: 0.3125rem;
+}
+
+.Nav__Hamburger div:nth-child(1) {
+    transform: translateY(4px);
+}
+
+.Nav__Hamburger div:nth-child(2) {
+    transform: translateY(8px);
+}
+
+.Nav__Hamburger div:nth-child(3) {
+    transform: translateY(12px);
+}
