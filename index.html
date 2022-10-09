@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hosterr</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,13 +21,11 @@
         <a href="#">Hosterr is hiring!</a>
       </div>
       <!-- Navigation Bar Links-->
-      <div class="Nav__Links">
-        <ul>
-          <li><a href="#">Plans</a></li>
-          <li><a href="#">Find Domain</a></li>
-          <li><a href="#">Why Hosterr</a></li>
-        </ul>
-      </div>
+      <ul class="Nav__Links">
+        <li><a href=" #">Plans</a></li>
+        <li><a href="#">Find Domain</a></li>
+        <li><a href="#">Why Hosterr</a></li>
+      </ul>
       <!-- Navigation Bar Call To Action-->
       <div class="Nav__Ctn">
         <a href="#" class="Nav__Ctn__SignIn">Sign in</a>
@@ -41,11 +40,11 @@
     </nav>
     <section class="Row">
       <div class="col">
-        <h1>Host your website in less than 5 minutes.</h1>
+        <h1 data-aos="fade-right">Host your website in less than 5 minutes.</h1>
         <p>With Hosterr, get your website up and running in no less than 5 minutes with the most competitive pricing
           packages available online.</p>
-        <form action="">
-          <input type="email" name="e-mail" id="e-mail" placeholder="Enter e-mail address">
+        <form action="https://httpbin.org/post" method="post">
+          <input type="email" name="e-mail" id="e-mail" placeholder="Enter e-mail address" required>
           <button type="submit" class="Nav__Ctn__Waitlist">Join Waitlist</button> <br>
           <input type="checkbox" name="chckbox" id="chckbox">
           <label for="chckbox"> No spam, ever. Unsubcribe
@@ -76,6 +75,10 @@
       </div>
     </footer>
   </main>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

@@ -48,7 +48,7 @@ body {
 /* Navigation Bar Logo */
 .Nav__Logo>a {
     font-family: 'Lato', sans-serif;
-    margin-left: 0.5em;
+    margin-left: 1em;
     width: 8.75rem;
     background: linear-gradient(to right, #eaa955, #ea5573);
     color: #f5f5f5;
@@ -71,20 +71,20 @@ body {
     text-align: center;
 }
 
-.Nav__Links ul li {
+.Nav__Links li {
     display: inline-block;
     list-style-type: none;
     margin: 0 1rem;
 }
 
-.Nav__Links ul li a {
+.Nav__Links li a {
     text-decoration: none;
     color: var(--Nav__Text__Color);
     font-weight: 600;
 }
 
-.Nav__Links ul li a:hover,
-.Nav__Links ul li a:focus {
+.Nav__Links li a:hover,
+.Nav__Links li a:focus {
     text-decoration: underline;
     text-decoration-color: var(--Nav__Hover__Color);
     color: var(--Nav__Hover__Color);
@@ -188,6 +188,9 @@ input[type="email"] {
     background-color: #fff;
     width: 60%;
     margin-top: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 5px;
 }
 
 input[type="email"]::placeholder {
@@ -212,12 +215,13 @@ form .Nav__Ctn__Waitlist:focus {
 
 input[type="checkbox"] {
     cursor: pointer;
-    display: none;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 form>label {
     position: relative;
-    left: 24px;
+    left: 1.5rem;
     color: var(--Nav__Text__Color);
 }
 
@@ -245,32 +249,33 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .Hero__Container>.Hero__Container__img {
-    transform: translate(150px, 25px);
-    height: 380px;
-    width: 322px;
+    transform: translate(9.375rem, 1.5625rem);
+    height: 23.75rem;
+    width: 20.125rem;
     z-index: 333;
     position: relative;
+    z-index: 3;
 }
 
 .Shapes {
-    height: 380px;
-    width: 322px;
+    height: 23.75rem;
+    width: 20.125rem;
     position: absolute;
     z-index: 1;
-    top: 25px;
-    left: 150px;
+    top: 1.5625rem;
+    left: 9.375rem;
 }
 
 .Shapes:nth-child(2) {
-    transform: rotateZ(-35deg);
+    transform: rotateZ(-30deg);
 }
 
 .Shapes:nth-child(3) {
-    transform: rotateZ(-25deg);
+    transform: rotateZ(-20deg);
 }
 
 .Shapes:nth-child(4) {
-    transform: rotateZ(-15deg);
+    transform: rotateZ(-10deg);
 }
 
 /* FOOTER STYLES */
@@ -278,7 +283,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transform: translateY(80px);
+    transform: translateY(5rem);
 }
 
 footer ul li {
@@ -290,6 +295,7 @@ footer ul li {
 footer ul li a {
     text-decoration: none;
     color: var(--Nav__Text__Color);
+    font-weight: 500;
 }
 
 footer ul li a:hover,
@@ -316,4 +322,184 @@ footer ul li a:focus {
 .Help__Description p:nth-child(2) {
     font-family: 'Lato', sans-serif;
     font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+
+    /* HERO STYLES */
+    .Hero {
+        width: 100%;
+        height: 145vh;
+    }
+
+    /* NAV STYLES */
+    .Nav {
+        justify-content: flex-start;
+    }
+
+    .Nav__Ctn {
+        display: none;
+    }
+
+    .Nav__Links {
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding-top: 20%;
+        z-index: 999;
+        margin-top: -900px;
+    }
+
+    .Nav__Links li {
+        display: block;
+        margin-bottom: 6rem;
+    }
+
+    .Nav__Links li a {
+        color: #E6E6E6;
+    }
+
+    .Nav__Hamburger {
+        display: block;
+        position: absolute;
+        z-index: 99999;
+        right: 3.5rem;
+        cursor: pointer;
+    }
+
+    .Nav__Hamburger div {
+        background-color: #000;
+    }
+
+    /* SECTION STYLES */
+    .Row {
+        flex-direction: column-reverse;
+    }
+
+    .col {
+        flex-basis: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .col h1 {
+        font-size: 3.3rem;
+    }
+
+    .col p {
+        font-size: 1rem;
+    }
+
+    .Hero__Container>.Hero__Container__img {
+        transform: translateX(3.125rem);
+        height: 23.75rem;
+        width: 20.125rem;
+        z-index: 333;
+        position: relative;
+    }
+
+    .Shapes {
+        height: 23.75rem;
+        width: 20.125rem;
+        top: 0px;
+        left: 3.125rem;
+    }
+
+    /* FOOTER STYLES */
+    footer {
+        height: 5.25rem;
+        transform: translateY(7.9375rem);
+    }
+}
+
+@media only screen and (max-width: 414px) {
+
+    /* HERO STYLES */
+    .Hero {
+        width: 100%;
+    }
+
+    /* NAV STYLES */
+    .Nav__Logo>img {
+        width: 80px;
+    }
+
+    .Nav__Logo {
+        justify-content: flex-start;
+    }
+
+    .Nav__Logo>a {
+        width: 7rem;
+        padding: 0.2125rem 0.50rem;
+        font-size: 0.75rem;
+    }
+
+    .Nav__Hamburger {
+        right: 2rem;
+    }
+
+    /* SECTION STYLES */
+    .Row {
+        flex-direction: column-reverse;
+    }
+
+    .col {
+        flex-basis: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .col h1 {
+        font-size: 2.9rem;
+    }
+
+    .col p {
+        font-size: 0.95rem;
+    }
+
+    .Hero__Container>.Hero__Container__img {
+        transform: translateX(0.625rem);
+        height: 18.75rem;
+        width: 15.125rem;
+    }
+
+    .Shapes {
+        height: 18.75rem;
+        width: 15.125rem;
+        top: 0px;
+        left: 0.625rem;
+    }
+
+    input[type="email"] {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    form .Nav__Ctn__Waitlist {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding-block: 1.25rem;
+    }
+
+
+
+    /* FOOTER STYLES */
+    footer {
+        flex-direction: column;
+        transform: translateY(1.25rem);
+    }
+
+    ul {
+        align-self: flex-start;
+        margin-bottom: 1.875rem;
+    }
+
+    .Help {
+        align-self: flex-start;
+    }
 }
