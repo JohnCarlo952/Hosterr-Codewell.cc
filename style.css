@@ -13,6 +13,11 @@ font-family: 'Playfair Display', serif; */
     outline: none;
 }
 
+:root {
+    --Nav__Text__Color: #525252;
+    --Nav__Hover__Color: #360b0b;
+}
+
 body {
     font-size: 1rem;
 }
@@ -57,7 +62,7 @@ body {
 
 .Nav__Logo>a:hover,
 .Nav__Logo>a:focus {
-    color: #360b0b;
+    color: var(--Nav__Hover__Color);
 }
 
 /* Navigation Bar Links*/
@@ -74,15 +79,15 @@ body {
 
 .Nav__Links ul li a {
     text-decoration: none;
-    color: #525252;
+    color: var(--Nav__Text__Color);
     font-weight: 600;
 }
 
 .Nav__Links ul li a:hover,
 .Nav__Links ul li a:focus {
     text-decoration: underline;
-    text-decoration-color: #360b0b;
-    color: #360b0b;
+    text-decoration-color: var(--Nav__Hover__Color);
+    color: var(--Nav__Hover__Color);
     outline: none;
 }
 
@@ -99,15 +104,15 @@ body {
 }
 
 .Nav__Ctn__SignIn {
-    color: #525252;
+    color: var(--Nav__Text__Color);
     font-weight: 600;
 }
 
 .Nav__Ctn__SignIn:hover,
 .Nav__Ctn__SignIn:focus {
     text-decoration: underline;
-    text-decoration-color: #360b0b;
-    color: #360b0b;
+    text-decoration-color: var(--Nav__Hover__Color);
+    color: var(--Nav__Hover__Color);
 }
 
 .Nav__Ctn__Waitlist {
@@ -120,7 +125,7 @@ body {
 
 .Nav__Ctn__Waitlist:hover,
 .Nav__Ctn__Waitlist:focus {
-    color: #360b0b;
+    color: var(--Nav__Hover__Color);
 }
 
 /* Navigation Bar Menu*/
@@ -147,4 +152,168 @@ body {
 
 .Nav__Hamburger div:nth-child(3) {
     transform: translateY(12px);
+}
+
+/* MAIN CONTENT */
+
+
+/* FIRST COL */
+.Row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.col {
+    flex-basis: 50%;
+    margin-top: 2rem;
+}
+
+.col h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+.col p {
+    font-size: 1.21rem;
+    margin-top: 1rem;
+    color: var(--Nav__Text__Color);
+}
+
+input[type="email"] {
+    padding: 0.75rem 0.9375rem;
+    border: none;
+    background-color: #fff;
+    width: 60%;
+    margin-top: 0.5rem;
+}
+
+input[type="email"]::placeholder {
+    color: var(--Nav__Text__Color);
+    font-family: 'Lato', sans-serif;
+    padding: 0 0.5rem;
+}
+
+form .Nav__Ctn__Waitlist {
+    outline: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+}
+
+form .Nav__Ctn__Waitlist:hover,
+form .Nav__Ctn__Waitlist:focus {
+    color: var(--Nav__Hover__Color);
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    display: none;
+}
+
+form>label {
+    position: relative;
+    left: 24px;
+    color: var(--Nav__Text__Color);
+}
+
+form>label::before {
+    content: "";
+    background: url(assets/Checkmark.svg);
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: -25px;
+    bottom: -0;
+    transform: scale(0) rotateZ(180deg);
+    transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+
+input[type="checkbox"]:checked+label::before {
+    transform: scale(1) rotateZ(0deg);
+}
+
+/* SECOND COL */
+.col:nth-child(2) {
+    position: relative;
+}
+
+.Hero__Container>.Hero__Container__img {
+    transform: translate(150px, 25px);
+    height: 380px;
+    width: 322px;
+    z-index: 333;
+    position: relative;
+}
+
+.Shapes {
+    height: 380px;
+    width: 322px;
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    left: 150px;
+}
+
+.Shapes:nth-child(2) {
+    transform: rotateZ(-35deg);
+}
+
+.Shapes:nth-child(3) {
+    transform: rotateZ(-25deg);
+}
+
+.Shapes:nth-child(4) {
+    transform: rotateZ(-15deg);
+}
+
+/* FOOTER STYLES */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(80px);
+}
+
+footer ul li {
+    display: inline-block;
+    margin-right: 1rem;
+    list-style-type: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: var(--Nav__Text__Color);
+}
+
+footer ul li a:hover,
+footer ul li a:focus {
+    text-decoration-color: var(--Nav__Hover__Color);
+    color: var(--Nav__Hover__Color);
+    outline: none;
+}
+
+.Help {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Help__avatar {
+    margin-right: 1rem;
+}
+
+.Help__Description p {
+    font-family: 'Lato', sans-serif;
+}
+
+.Help__Description p:nth-child(2) {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
 }
