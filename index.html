@@ -1,84 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hosterr</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hosterr</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-
-<body>
-  <!-- Hero -->
-  <main class="Hero">
-    <!-- Navigation Bar -->
-    <nav class="Nav">
-      <!-- Navigation Bar Logo-->
-      <div class="Nav__Logo">
-        <img src="Assets/Logo.svg" alt="" />
-        <a href="#">Hosterr is hiring!</a>
-      </div>
-      <!-- Navigation Bar Links-->
-      <ul class="Nav__Links">
-        <li><a href=" #">Plans</a></li>
-        <li><a href="#">Find Domain</a></li>
-        <li><a href="#">Why Hosterr</a></li>
-      </ul>
-      <!-- Navigation Bar Call To Action-->
-      <div class="Nav__Ctn">
-        <a href="#" class="Nav__Ctn__SignIn">Sign in</a>
-        <a href="#" class="Nav__Ctn__Waitlist">Join Waitlist</a>
-      </div>
-      <!-- Navigation Bar Menu-->
-      <div class="Nav__Hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </nav>
-    <section class="Row">
-      <div class="col">
-        <h1 data-aos="fade-right">Host your website in less than 5 minutes.</h1>
-        <p>With Hosterr, get your website up and running in no less than 5 minutes with the most competitive pricing
-          packages available online.</p>
-        <form action="https://httpbin.org/post" method="post">
-          <input type="email" name="e-mail" id="e-mail" placeholder="Enter e-mail address" required>
-          <button type="submit" class="Nav__Ctn__Waitlist">Join Waitlist</button> <br>
-          <input type="checkbox" name="chckbox" id="chckbox">
-          <label for="chckbox"> No spam, ever. Unsubcribe
-            anytime.</label>
-        </form>
-      </div>
-      <div class="col">
-        <div class="Hero__Container">
-          <img class="Hero__Container__img" src="Assets/Hero Image (Model).png" alt="">
-          <img class="Shapes" src="assets/Blue Shape.svg" alt="">
-          <img class="Shapes" src="assets/Pink Shape.svg" alt="">
-          <img class="Shapes" src="assets/Purple Shape.svg" alt="">
+  <body>
+    <!-- Hero -->
+    <main class="Hero">
+      <!-- Navigation Bar -->
+      <nav class="Nav">
+        <!-- Navigation Bar Logo-->
+        <div class="Nav__Logo">
+          <img src="Assets/Logo.svg" alt="" />
+          <a href="#">Hosterr is hiring!</a>
         </div>
-      </div>
-    </section>
-    <footer>
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter</a></li>
-      </ul>
-      <div class="Help">
-        <a href="#"><img src="assets/Help Avatar.svg" alt="" class="Help__avatar"></a>
-        <div class="Help__Description">
-          <p>Have any questions?</p>
-          <p>Talk to a specialist</p>
+        <!-- Navigation Bar Links-->
+        <ul class="Nav__Links">
+          <li><a href="#">Plans</a></li>
+          <li><a href="#">Find Domain</a></li>
+          <li><a href="#">Why Hosterr</a></li>
+        </ul>
+        <!-- Navigation Bar Call To Action-->
+        <div class="Nav__Ctn">
+          <a href="#" class="Nav__Ctn__SignIn">Sign in</a>
+          <a href="#" class="Nav__Ctn__Waitlist">Join Waitlist</a>
         </div>
-      </div>
-    </footer>
-  </main>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
-
+        <!-- Navigation Bar Menu-->
+        <div class="Nav__Hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+      <section class="Row">
+        <div class="col">
+          <h1 data-aos="fade-right">
+            Host your website in less than 5 minutes.
+          </h1>
+          <p>
+            With Hosterr, get your website up and running in no less than 5
+            minutes with the most competitive pricing packages available online.
+          </p>
+          <form action="https://httpbin.org/post" method="post">
+            <input
+              type="email"
+              name="e-mail"
+              id="e-mail"
+              placeholder="Enter e-mail address"
+              required
+            />
+            <button type="submit" class="Nav__Ctn__Waitlist">
+              Join Waitlist
+            </button>
+            <br />
+            <input type="checkbox" name="chckbox" id="chckbox" />
+            <label for="chckbox"> No spam, ever. Unsubcribe anytime.</label>
+          </form>
+        </div>
+        <div class="col">
+          <div class="Hero__Container">
+            <img
+              class="Hero__Container__img"
+              src="Assets/Hero Image (Model).png"
+              alt=""
+            />
+            <img class="Shapes" src="assets/Blue Shape.svg" alt="" />
+            <img class="Shapes" src="assets/Pink Shape.svg" alt="" />
+            <img class="Shapes" src="assets/Purple Shape.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <footer>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+        <div class="Help">
+          <a href="#"
+            ><img src="assets/Help Avatar.svg" alt="" class="Help__avatar"
+          /></a>
+          <div class="Help__Description">
+            <p>Have any questions?</p>
+            <p>Talk to a specialist</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
